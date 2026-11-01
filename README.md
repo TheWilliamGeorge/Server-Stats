@@ -4,6 +4,7 @@
 - Journal: [JOURNAL.md](JOURNAL.md)
 - 3D Model Files: See Enclosure.step/.stl/.x_t
 - Code: [code](code)
+- Enclosure link: [Onshape](https://cad.onshape.com/documents/0e2e98401547229f6d8b7911/w/038e0544fdd15a68a593150d/e/4c07c3c454585c77361754f1?renderMode=0&uiState=6ae70b505a10138744b5f000)
 
 ## What is this?
 This is a small display unit that will show statistics about my Raspberry Pi and Oracle Cloud servers. It will run off USB-C, and refresh about every 5 minutes or so, using WiFi to fetch data.
