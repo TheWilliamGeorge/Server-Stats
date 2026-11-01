@@ -1,0 +1,5 @@
+|Item                    |Qty|Supplier|Cost/item|Total Cost|link                                                                                                                     |
+|------------------------|---|--------|---------|----------|-------------------------------------------------------------------------------------------------------------------------|
+|Raspberry PI Pico WH    |1  |Pi Hut  |$8.97    |$8.97     |https://thepihut.com/products/raspberry-pi-pico-w?variant=41952994787523                                                 |
+|ePaper Display          |1  |Pi Hut  |$18.08   |$18.08    |https://thepihut.com/products/2-13-black-white-e-ink-e-paper-display-module-for-raspberry-pi-pico-250x122#product-reviews|
+|Estimated total shipping|1  |        |         |$5.09     |                                                                                                                         |
