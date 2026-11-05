@@ -16,6 +16,14 @@ HEADINGS = [
 ]
 
 ## HELPER FUNCTIONS ##
+def get_temp_string(temps):
+    """Safely converts the CPU temperature dictionary into a readable string."""
+    if isinstance(temps, dict):
+        # Grabs the first temperature value (e.g., '42.394°C') or formats them all
+        return ", ".join(f"{v}" for v in temps.values())
+    return str(temps or "N/A")
+
+
 def parse_data(data: dict, page: int):
     """
     Parses incoming data into an array with fully formatted data for a given page.
@@ -29,7 +37,7 @@ def parse_data(data: dict, page: int):
         page_data = []
         # Use .get() for fallback
         page_data.append (data.get("cpu_f"))
-        page_data.append (data.get("cpu_temps_f"))
+        page_data.append (get_temp_string(data.get("cpu_temps_f")))
         page_data.append (data.get("current_freq_f"))
 
     elif page == 1:
@@ -72,7 +80,7 @@ def parse_data(data: dict, page: int):
         page_data = []
         # Get values
         page_data.append (f"CPU Usage: {data.get("one_load_f")}")
-        page_data.append (data.get("cpu_temps_f"))
+        page_data.append (get_temp_string(data.get("cpu_temps_f")))
         page_data.append (data.get("fans_f"))
         page_data.append (f"Battery: {data.get("battery_f")}")
 
@@ -139,7 +147,7 @@ def render(data, index, display):
 
 def main():
     display = MacDisplaySimulator(40)
-    index = 7
+    index = 0
     try:
         #print("\n--- Polling Server ---")
         # 1. Fetch and parse data
